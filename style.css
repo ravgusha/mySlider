@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    bottom: 0;
+}
+
+body::after {
+    content: 'Слайд';
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    filter: blur(5px);
+    /* transition:all 0.3s ease-in-out;   */
+    animation: ani-mouse 2.5s linear;
+
+}
+
+.active {
+    display: flex;
+}
+
+
+.btn {
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    right: 5rem;
+    transform: rotate(-45deg);
+}
+
+.left {
+    left: 5rem;
+    transform: rotate(135deg);
+}
+
+
+@keyframes ani-mouse {
+    0% {
+        opacity: 0;
+        top: 29%;
+    }
+
+    50% {
+        opacity: 1;
+        top: 50%;
+    }
+
+}
