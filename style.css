@@ -7,7 +7,8 @@ body::after {
     content: 'Слайд';
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 50px;
     color: #fff;
 }
@@ -33,6 +34,7 @@ body::after {
 .btn {
     position: absolute;
     top: 50%;
+    transform: translateX(-50%);
     width: 64px;
     height: 64px;
     cursor: pointer;
